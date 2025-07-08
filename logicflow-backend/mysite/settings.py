@@ -28,9 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
+    'doc',
+    "daphne",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,6 +53,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+
+ASGI_APPLICATION = "mysite.asgi.application"
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+
 
 TEMPLATES = [
     {
