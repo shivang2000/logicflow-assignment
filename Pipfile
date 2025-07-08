@@ -4,8 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-gunicorn = "*"
-uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
